@@ -3,17 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.Ecommerce.testscripts.loginModule.ValidLoginTest2">
+      <class name="com.Ecommerce.testscripts.addToCartModule.AddToCartTest">
         <methods>
-          <include name="login"/>
           <include name="toCloseDatabase"/>
+          <include name="addToCart"/>
           <include name="tearDown"/>
           <include name="toConnectDatabase"/>
           <include name="toConnectServer"/>
           <include name="toCloseServer"/>
           <include name="setUp"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.Ecommerce.testscripts.loginModule.ValidLoginTest2 -->
+      </class> <!-- com.Ecommerce.testscripts.addToCartModule.AddToCartTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

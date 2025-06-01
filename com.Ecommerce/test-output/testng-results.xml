@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="10" total="12" passed="2" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[==server connected successfully==]]>
@@ -11,6 +11,9 @@
       <![CDATA[browser chrome launched successfully]]>
     </line>
     <line>
+      <![CDATA[add to cart test script executed successfuly]]>
+    </line>
+    <line>
       <![CDATA[browser closed sucessfully]]>
     </line>
     <line>
@@ -20,94 +23,81 @@
       <![CDATA[==server closed successfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-05-31T05:54:49Z" name="Default suite" finished-at="2025-05-31T05:55:01Z" duration-ms="11631">
+  <suite started-at="2025-06-01T09:21:54Z" name="Suite" finished-at="2025-06-01T09:22:14Z" duration-ms="20209">
     <groups>
+      <group name="ST">
+        <method signature="AddToCartTest.login()[pri:0, instance:com.Ecommerce.testscripts.addToCartModule.AddToCartTest@31ff43be]" name="login" class="com.Ecommerce.testscripts.addToCartModule.AddToCartTest"/>
+        <method signature="AddToCartTest.addToCart()[pri:0, instance:com.Ecommerce.testscripts.addToCartModule.AddToCartTest@31ff43be]" name="addToCart" class="com.Ecommerce.testscripts.addToCartModule.AddToCartTest"/>
+      </group> <!-- ST -->
+      <group name="RT">
+        <method signature="AddToCartTest.addToCart()[pri:0, instance:com.Ecommerce.testscripts.addToCartModule.AddToCartTest@31ff43be]" name="addToCart" class="com.Ecommerce.testscripts.addToCartModule.AddToCartTest"/>
+      </group> <!-- RT -->
     </groups>
-    <test started-at="2025-05-31T05:54:49Z" name="Default test" finished-at="2025-05-31T05:55:01Z" duration-ms="11631">
-      <class name="com.Ecommerce.testscripts.loginModule.ValidLoginTest2">
-        <test-method is-config="true" signature="toConnectServer()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest2@7164ca4c]" started-at="2025-05-31T05:54:49Z" name="toConnectServer" finished-at="2025-05-31T05:54:49Z" duration-ms="19" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==server connected successfully==]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toConnectServer -->
-        <test-method is-config="true" signature="toConnectDatabase()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest2@7164ca4c]" started-at="2025-05-31T05:54:49Z" name="toConnectDatabase" finished-at="2025-05-31T05:54:49Z" duration-ms="0" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[==database connected successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- toConnectDatabase -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest2@7164ca4c]" started-at="2025-05-31T05:54:49Z" name="setUp" finished-at="2025-05-31T05:54:54Z" duration-ms="4430" status="PASS">
+    <test started-at="2025-06-01T09:21:54Z" name="Test" finished-at="2025-06-01T09:22:14Z" duration-ms="20209">
+      <class name="com.Ecommerce.testscripts.addToCartModule.AddToCartTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.Ecommerce.testscripts.addToCartModule.AddToCartTest@31ff43be]" started-at="2025-06-01T09:21:54Z" name="setUp" finished-at="2025-06-01T09:21:59Z" duration-ms="5864" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[browser chrome launched successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="login()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest2@7164ca4c]" started-at="2025-05-31T05:54:54Z" name="login" finished-at="2025-05-31T05:55:01Z" duration-ms="6981" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-expected [false] but found [true]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-expected [false] but found [true]
-at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-at com.Ecommerce.testscripts.loginModule.ValidLoginTest2.login(ValidLoginTest2.java:23)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="login()[pri:0, instance:com.Ecommerce.testscripts.addToCartModule.AddToCartTest@31ff43be]" started-at="2025-06-01T09:21:59Z" name="login" finished-at="2025-06-01T09:22:02Z" duration-ms="2671" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest2@7164ca4c]" started-at="2025-05-31T05:55:01Z" name="tearDown" finished-at="2025-05-31T05:55:01Z" duration-ms="188" status="PASS">
+        <test-method signature="addToCart()[pri:0, instance:com.Ecommerce.testscripts.addToCartModule.AddToCartTest@31ff43be]" started-at="2025-06-01T09:22:02Z" name="addToCart" finished-at="2025-06-01T09:22:12Z" depends-on-methods="com.Ecommerce.testscripts.addToCartModule.AddToCartTest.login" duration-ms="9532" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[add to cart test script executed successfuly]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- addToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.Ecommerce.testscripts.addToCartModule.AddToCartTest@31ff43be]" started-at="2025-06-01T09:22:12Z" name="tearDown" finished-at="2025-06-01T09:22:14Z" duration-ms="2087" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[browser closed sucessfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="toCloseDatabase()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest2@7164ca4c]" started-at="2025-05-31T05:55:01Z" name="toCloseDatabase" finished-at="2025-05-31T05:55:01Z" duration-ms="1" status="PASS">
+      </class> <!-- com.Ecommerce.testscripts.addToCartModule.AddToCartTest -->
+      <class name="com.Ecommerce.testscripts.loginModule.ValidLoginTest">
+        <test-method is-config="true" signature="toConnectServer()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest@1fa1cab1]" started-at="2025-06-01T09:21:53Z" name="toConnectServer" finished-at="2025-06-01T09:21:54Z" duration-ms="31" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==server connected successfully==]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- toConnectServer -->
+        <test-method is-config="true" signature="toConnectDatabase()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest@1fa1cab1]" started-at="2025-06-01T09:21:54Z" name="toConnectDatabase" finished-at="2025-06-01T09:21:54Z" duration-ms="1" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[==database connected successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- toConnectDatabase -->
+        <test-method is-config="true" signature="toCloseDatabase()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest@1fa1cab1]" started-at="2025-06-01T09:22:14Z" name="toCloseDatabase" finished-at="2025-06-01T09:22:14Z" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==database closed successfully==]]>
             </line>
           </reporter-output>
         </test-method> <!-- toCloseDatabase -->
-        <test-method is-config="true" signature="toCloseServer()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest2@7164ca4c]" started-at="2025-05-31T05:55:01Z" name="toCloseServer" finished-at="2025-05-31T05:55:01Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="toCloseServer()[pri:0, instance:com.Ecommerce.testscripts.loginModule.ValidLoginTest@1fa1cab1]" started-at="2025-06-01T09:22:14Z" name="toCloseServer" finished-at="2025-06-01T09:22:14Z" duration-ms="0" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[==server closed successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- toCloseServer -->
-      </class> <!-- com.Ecommerce.testscripts.loginModule.ValidLoginTest2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.Ecommerce.testscripts.loginModule.ValidLoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

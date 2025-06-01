@@ -1,6 +1,7 @@
 package com.Ecommerce.testscripts.loginModule;
 
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import com.Ecommerce.genericLibrary.BaseClass;
@@ -9,9 +10,8 @@ import com.Ecommerce.objectRepository.WelcomePage;
 
 public class ValidLoginTest extends BaseClass {
 
-	@Test
+	@Test(groups = {"FT","RT"})
 	public void login() throws InterruptedException {
-
 		// click on login link
 		WelcomePage wp = new WelcomePage(driver);
 		// verify the welcome page is displayed or not
@@ -22,7 +22,7 @@ public class ValidLoginTest extends BaseClass {
 		LoginPage lp = new LoginPage(driver);
 		lp.loginFunctionality("dee01@gmail.com", "12345678");
 		Assert.assertEquals(lp.getLogoutLink().isDisplayed(), true);
-
+		Reporter.log("loginn test script executed successfully",true);
 	}
 
 }

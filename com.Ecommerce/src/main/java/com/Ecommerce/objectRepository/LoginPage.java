@@ -22,8 +22,7 @@ public class LoginPage extends BaseTest {
 
 	@FindBy(xpath = "//input[@value='Log in']")
 	private WebElement loginButton;
-	
-	
+
 	@FindBy(linkText = "Log out")
 	private WebElement logoutLink;
 
@@ -49,11 +48,8 @@ public class LoginPage extends BaseTest {
 
 	public void loginFunctionality(String email, String password) throws InterruptedException {
 		emailTextField.sendKeys(email);
-		Thread.sleep(2000);
 		passwordTextField.sendKeys(password);
-		Thread.sleep(2000);
 		rememberMeCheckbox.click();
-		Thread.sleep(2000);
 		loginButton.click();
 	}
 

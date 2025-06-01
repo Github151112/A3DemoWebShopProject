@@ -3,6 +3,7 @@ package com.Ecommerce.testscripts.regsiterModule;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -18,8 +19,8 @@ public class RegisterTest extends BaseClass {
 		return ExcelUtility.readExcel(EXCEL_PATH, REG_SHEET);
 	}
 
-	@Test(dataProvider = "TestData")
-	public void register(String gender, String firstName, String lastName, String email, String password)
+	@Test(dataProvider = "TestData",groups = {"ST","FT"})
+	public void register(String gender, String firstName, String lastName ,String password)
 			throws InterruptedException {
 
 		// click on register link
@@ -27,7 +28,8 @@ public class RegisterTest extends BaseClass {
 		wp.getRegisterLink().click();
 		// select the gender
 		RegistrationPage rp = new RegistrationPage(driver);
-		rp.registration(driver, gender, firstName, lastName, email, password);
+		rp.registration(driver, gender, firstName, lastName, d.getRandomEmail(), password);
+		Reporter.log("register test script executed suceessfully",true);
 
 	}
 

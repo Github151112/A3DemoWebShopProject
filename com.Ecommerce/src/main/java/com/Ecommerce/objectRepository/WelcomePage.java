@@ -16,14 +16,14 @@ public class WelcomePage extends BaseTest {
 	public WebElement getRegisterLink() {
 		return registerLink;
 	}
-	
+
 	@FindBy(linkText = "Log in")
 	private WebElement loginLink;
 
 	public WebElement getLoginLink() {
 		return loginLink;
 	}
-	
+
 	@FindBy(xpath = "//img[@alt='Tricentis Demo Web Shop']")
 	private WebElement demoLogo;
 
@@ -31,10 +31,18 @@ public class WelcomePage extends BaseTest {
 		return demoLogo;
 	}
 
-	
-	
-	
-	
-	
+	@FindBy(linkText = "Shopping cart")
+	private WebElement shoppingCart;
+
+	public WebElement getShoppingCart() {
+		return shoppingCart;
+	}
+
+	@FindBy(xpath = "//ul[@class='top-menu']//a[contains(text(),'Books')]")
+	private WebElement booksLink;
+
+	public WebElement getBooksLink() {
+		return booksLink;
+	}
 
 }

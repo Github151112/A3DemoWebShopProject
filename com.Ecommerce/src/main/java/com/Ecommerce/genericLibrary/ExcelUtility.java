@@ -17,7 +17,7 @@ public class ExcelUtility {
 		int row = sheet.getPhysicalNumberOfRows();
 		int cell = sheet.getRow(0).getPhysicalNumberOfCells();
 		Object[][] data = new Object[row - 1][cell];
-		for (int i = 1; i <= row; i++) {
+		for (int i = 1; i < row; i++) {
 			for (int j = 0; j < cell; j++) {
 				data[i - 1][j] = sheet.getRow(i).getCell(j).getStringCellValue();
 			}
