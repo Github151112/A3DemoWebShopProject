@@ -11,7 +11,7 @@ public class ProductPage extends BaseTest {
 		// TODO Auto-generated constructor stub
 	}
 
-	@FindBy(xpath = "//a[text()='Computing and Internet']/../..//input[@value='Add to cart']")
+	@FindBy(xpath = "//a[text()='Computing and Internet']/../..//input[@value='Ad]")
 	private WebElement bookProduct;
 
 	public WebElement getBookProduct() {

@@ -17,7 +17,7 @@ import org.testng.annotations.Parameters;
 public class BaseClass implements IAutoConstant {
 	public DataUtility d = new DataUtility();
 	public FileUtility f = new FileUtility();
-	public WebDriver driver;
+	public static WebDriver driver;
 	@BeforeSuite(alwaysRun = true)
 	public void toConnectServer() {
 		Reporter.log("==server connected successfully==", true);

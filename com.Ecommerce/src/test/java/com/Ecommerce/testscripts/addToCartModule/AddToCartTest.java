@@ -2,15 +2,18 @@ package com.Ecommerce.testscripts.addToCartModule;
 
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.Ecommerce.genericLibrary.BaseClass;
+import com.Ecommerce.genericLibrary.CustomeListener;
 import com.Ecommerce.objectRepository.CheckOutPage;
 import com.Ecommerce.objectRepository.LoginPage;
 import com.Ecommerce.objectRepository.ProductPage;
 import com.Ecommerce.objectRepository.ShoppingCartPage;
 import com.Ecommerce.objectRepository.WelcomePage;
 
+@Listeners(CustomeListener.class)
 public class AddToCartTest extends BaseClass {
 	
 	@Test(groups = "ST")
